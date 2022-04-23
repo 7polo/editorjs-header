@@ -15,24 +15,24 @@
     margin: 0 !important;
 }
 
-.ce-header.H1 {
+.ce-header[data-header=H1] {
     font-size: 1.8em;
 }
 
-.ce-header.H2 {
+.ce-header[data-header=H2] {
     font-size: 1.6em;
 }
 
-.ce-header.H3 {
+.ce-header[data-header=H3] {
     font-size: 1.5em;
 }
 
-.ce-header.H4 {
+.ce-header[data-header=H4] {
     font-size: 1.3em;
 }
 
-.ce-header.H5,
-.ce-header.H6 {
+.ce-header[data-header=H5],
+.ce-header[data-header=H6] {
     font-size: 1.2em;
 }
 

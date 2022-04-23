@@ -116,7 +116,7 @@ export default class Header {
             /**
              * Highlight current level button
              */
-            if (this.currentLevel.level === level.level) {
+            if (this.currentLevel.level === level.data.level) {
                 selectTypeButton.classList.add(this._CSS.settingsButtonActive);
             }
 
@@ -281,7 +281,11 @@ export default class Header {
         /**
          * Create element for current Block's level
          */
-        const tag = this._element ? this._element : document.createElement('div');
+        let tag = this._element;
+        if (!tag) {
+            tag = document.createElement('div');
+            tag.classList.add(this._CSS.wrapper);
+        }
 
         /**
          * Add text to block
@@ -289,11 +293,9 @@ export default class Header {
         tag.innerHTML = this._data.text || '';
 
         /**
-         * Add styles class
+         * change dataset
          */
-        tag.classList.remove(Header.tags.map(i => `H${i}`));
-        tag.classList.add();
-        tag.classList.add(this._CSS.wrapper, this.currentLevel.tag);
+        tag.dataset.header = this.currentLevel.tag;
 
         /**
          * Make tag editable

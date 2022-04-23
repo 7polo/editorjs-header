@@ -1,8 +1,6 @@
 # Heading Tool
 
-![Version of EditorJS that the plugin is compatible with](https://badgen.net/badge/Editor.js/v2.0/blue)
-
-Provides Headings Blocks for the [Editor.js](https://ifmo.su/editor).
+rendered by DIV tag instead of Head tag
 
 ## Installation
 
@@ -11,31 +9,9 @@ Provides Headings Blocks for the [Editor.js](https://ifmo.su/editor).
 Get the package
 
 ```shell
-npm i --save @editorjs/header
+npm i --save @7polo/editorjs-header
 ```
 
-Include module at your application
-
-```javascript
-const Header = require('@editorjs/header');
-```
-
-### Download to your project's source dir
-
-1. Upload folder `dist` from repository
-2. Add `dist/bundle.js` file to your page.
-
-### Load from CDN
-
-You can load specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@editorjs/header).
-
-`https://cdn.jsdelivr.net/npm/@editorjs/header@latest`
-
-Then require this script on page with Editor.js.
-
-```html
-<script src="..."></script>
-```
 
 ## Usage
 

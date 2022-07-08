@@ -400,17 +400,14 @@ export default class Header {
      * @returns {{icon: string, title: string}}
      */
     static get toolbox() {
-        return {
-            icon: ICON.tool,
-            title: 'Heading'
-        };
+        return Header.getSubTools({});
     }
 
     static getSubTools(config = {}) {
         const levels = config.levels ? Header.tags.filter(l => config.levels.includes(l)) : Header.tags;
         return levels.map(level => {
             return {
-                type: `H${level}`,
+                title: `H${level}`,
                 data: {
                     level: level
                 },

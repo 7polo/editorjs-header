@@ -5,8 +5,9 @@
     margin: 0;
     line-height: 1.25em;
     outline: none;
-    padding: .8em 0 6px;
+    /*padding: .8em 0 6px;*/
     font-weight: bold;
+    padding: 6px;
 }
 
 .ce-header p,
@@ -36,12 +37,6 @@
     font-size: 1.2em;
 }
 
-/**
- * Styles for Plugin icon in Toolbar
- */
-.ce-header__icon {
-}
-
 .ce-header[contentEditable=true][data-placeholder]::before {
     position: absolute;
     content: attr(data-placeholder);
@@ -57,4 +52,13 @@
 
 .ce-header[contentEditable=true][data-placeholder]:empty:focus::before {
     display: none;
+}
+
+.ce-header::after {
+    position: absolute;
+    content: attr(data-header);
+    color: rgba(112, 118, 132, .5);
+    display: inline-block;
+    left: -10px;
+    font-size: 12px;
 }

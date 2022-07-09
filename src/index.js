@@ -77,7 +77,7 @@ export default class Header {
             data = {};
         }
 
-        newData.text = data.text || '';
+        newData.text = (data.text || '').replaceAll('&nbsp;', ' ');
         newData.level = parseInt(data.level) || this._settings.defaultLevel;
 
         return newData;
@@ -196,10 +196,10 @@ export default class Header {
      * @public
      */
     save(toolsContent) {
-        return {
+        return this.normalizeData({
             text: toolsContent.innerHTML,
             level: this.currentLevel.level,
-        };
+        });
     }
 
     /**

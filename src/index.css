@@ -5,9 +5,8 @@
     margin: 0;
     line-height: 1.25em;
     outline: none;
-    /*padding: .8em 0 6px;*/
+    padding: 6px 0 6px 0;
     font-weight: bold;
-    padding: 6px;
 }
 
 .ce-header p,
@@ -59,6 +58,10 @@
     content: attr(data-header);
     color: rgba(112, 118, 132, .5);
     display: inline-block;
-    left: -10px;
+    left: -22px;
     font-size: 12px;
+}
+
+.ce-toolbar__actions {
+    padding-right: 24px;
 }

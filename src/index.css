@@ -16,24 +16,33 @@
 }
 
 .ce-header[data-header=H1] {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    padding: 32px 0 8px 0;
 }
 
 .ce-header[data-header=H2] {
-    font-size: 1.6em;
+    font-size: 1.5em;
+    padding: 24px 0 8px 0;
 }
 
 .ce-header[data-header=H3] {
-    font-size: 1.5em;
+    font-size: 1.4em;
+    padding: 24px 0 8px 0;
 }
 
 .ce-header[data-header=H4] {
     font-size: 1.3em;
+    padding: 18px 0 6px 0;
 }
 
-.ce-header[data-header=H5],
-.ce-header[data-header=H6] {
+.ce-header[data-header=H5] {
     font-size: 1.2em;
+    padding: 18px 0 6px 0;
+}
+
+.ce-header[data-header=H6] {
+    font-size: 1.1em;
+    padding: 18px 0 6px 0;
 }
 
 .ce-header[contentEditable=true][data-placeholder]::before {
@@ -57,9 +66,13 @@
     position: absolute;
     content: attr(data-header);
     color: rgba(112, 118, 132, .5);
-    display: inline-block;
+    display: none;
     left: -22px;
     font-size: 12px;
+}
+.ce-block:hover .ce-header::after,
+.ce-block--focused .ce-header::after {
+    display: inline-block;
 }
 
 .ce-toolbar__actions {

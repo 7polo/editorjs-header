@@ -404,8 +404,8 @@ export default class Header {
     }
 
     static getSubTools(config = {}) {
-        const levels = config.levels ? Header.tags.filter(l => l <= 4) : Header.tags;
-        return levels.map(level => {
+        const levels = Header.tags;
+        return levels.filter(level => level <= 4).map(level => {
             return {
                 title: `H${level}`,
                 data: {
